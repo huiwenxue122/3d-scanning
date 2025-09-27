@@ -18,4 +18,4 @@ The figure below illustrates the process:
 - **Red dashed line** = threshold (`0.8 * avgMax`)  
 - **Green points** = rows where a valid laser peak is detected  
 
-![detectLaser explanation](your_image_path.png)
+![detectLaser explanation](1.png)
