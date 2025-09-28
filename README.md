@@ -1,4 +1,11 @@
 # 3d-scanning-demos
+## ⚙️ Features Implemented
+- Integrated OpenCV (v4.10.0) for checkerboard detection and calibration.  
+- Implemented **laser detection** (using background subtraction) and **triangulation** methods.  
+- Automated pipeline: **Capture → Calibrate → Scan → Reconstruct**.  
+- Support for single-laser or dual-laser scanning, with or without color.  
+
+---
 
 ## Laser Line Detection
 
@@ -108,4 +115,49 @@ The next figure shows an augmented reality overlay of a wireframe cylinder, veri
 ## 🧠 Key Points
 - A vertical checkerboard provides 3D intersection lines with the laser, avoiding the ambiguity of a single line on the turntable plane.  
 - Triangulated 3D points should remain fixed in the **camera coordinate system**, appearing as parallel line segments across different views.  
-- The projection of the turntable’s rotation center should remain the same pixel in all images. The world coordinate system is defined with x/y in the turntable plane and z pointing upward.  
+- The projection of the turntable’s rotation center should remain the same pixel in all images. The world coordinate system is defined with x/y in the turntable plane and z pointing upward.
+
+  # Turntable Laser Scanner (ENGN2502 Assignment 04)
+
+This project is my implementation of **Assignment 04** for the course *ENGN2502: 3D Photography* at Brown University (Fall 2024).  
+
+The assignment integrates the work from previous assignments (homework 1–3) into a complete **3D turntable laser scanning system**.  
+
+---
+
+## 📌 Project Overview
+
+The scanner system consists of:
+- A **Raspberry Pi–based turntable laser scanner** with dual line lasers.  
+- A **Qt application (LaserScanner2024-A-04)** that communicates with the scanner over the network.  
+- Automated **image capture** with turntable rotation and laser switching.  
+- **Calibration** pipeline:
+  - Camera calibration (intrinsics)
+  - Turntable calibration (rotation axis & plane)
+  - Laser plane calibration (laser geometry)  
+- **3D reconstruction** by detecting laser lines in captured images and triangulating 3D points to build a dense point cloud.
+
+---
+
+
+
+## 🖼️ Hardware Setup
+
+The 3D scanner used in this assignment:  
+
+![Hardware](8.png)
+
+---
+
+## 🎯 Scanning Results
+
+Example result: scanning a bust object.  
+Left: reconstructed 3D point cloud from laser triangulation.  
+Right: captured image with detected laser line overlay.  
+
+![Results](9.png)
+
+---
+
+
+
