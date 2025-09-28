@@ -27,7 +27,7 @@ The `detectLaser` function detects a vertical red laser line in an image through
 
 Input image with intensity profile (before and after filtering):
 
-![Input and filtering result](images /2.png)
+![Input and filtering result](images /1.png)
 
 Final detected laser line (binary output):
 
