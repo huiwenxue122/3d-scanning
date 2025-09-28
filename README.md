@@ -27,11 +27,11 @@ The `detectLaser` function detects a vertical red laser line in an image through
 
 Input image with intensity profile (before and after filtering):
 
-![Input and filtering result](images/1.png)
+![Input and filtering result](images/2.png)
 
 Final detected laser line (binary output):
 
-![Laser line detection result](images/2.png)
+![Laser line detection result](images/3.png)
 
 
 The core algorithm (`detectLaser`) enhances the red channel and detects the vertical laser line as follows:
@@ -71,7 +71,7 @@ The goal is to implement **camera calibration** and **laser line triangulation**
 - Generated 3D point clouds of scanned objects.  
 
 **Pipeline Illustration:**  
-![Turntable Laser Scanner](6.png)
+![Turntable Laser Scanner](images/6.png)
 
 **Pipeline:**  
 1. Detect laser line.  
@@ -92,7 +92,7 @@ The goal is to implement **camera calibration** and **laser line triangulation**
 ## 📊 Results
 Below is an example of the reconstructed **3D point cloud** of a scanned vase:  
 
-![Point Cloud Result](5.png)  
+![Point Cloud Result](images/5.png)  
 
 ---
 
@@ -112,11 +112,11 @@ The goal is to align the **camera, laser plane, and turntable** within a unified
 ## 🖼️ Illustrations
 The following figure shows how multiple checkerboard poses are used to sample the laser plane and fit its equation:
 
-![Laser Plane Overview](7.png)
+![Laser Plane Overview](images/7.png)
 
 The next figure shows an augmented reality overlay of a wireframe cylinder, verifying the stability and correctness of the turntable calibration:
 
-![AR Check](8.png)
+![AR Check](images/8.png)
 
 ## 🧠 Key Points
 - A vertical checkerboard provides 3D intersection lines with the laser, avoiding the ambiguity of a single line on the turntable plane.  
@@ -146,7 +146,7 @@ The assignment integrates the work from previous assignments (homework 1–3) in
 
 The 3D scanner used in this assignment:  
 
-![Hardware](9.jpg)
+![Hardware](images/9.jpg)
 
 ---
 
@@ -156,7 +156,7 @@ Example result: scanning a bust object.
 Left: reconstructed 3D point cloud from laser triangulation.  
 Right: captured image with detected laser line overlay.  
 
-![Results](10.png)
+![Results](images/10.png)
 
 ---
 
