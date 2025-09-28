@@ -99,11 +99,11 @@ The goal is to align the **camera, laser plane, and turntable** within a unified
 ## 🖼️ Illustrations
 The following figure shows how multiple checkerboard poses are used to sample the laser plane and fit its equation:
 
-![Laser Plane Overview](./images/laser_plane_overview.png)
+![Laser Plane Overview](7.png)
 
 The next figure shows an augmented reality overlay of a wireframe cylinder, verifying the stability and correctness of the turntable calibration:
 
-![AR Check](./images/ar_check.png)
+![AR Check](8.png)
 
 ## 🧠 Key Points
 - A vertical checkerboard provides 3D intersection lines with the laser, avoiding the ambiguity of a single line on the turntable plane.  
