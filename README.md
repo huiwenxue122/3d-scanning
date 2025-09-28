@@ -39,7 +39,7 @@ The figure below illustrates the process:
 
 ![detectLaser explanation](1.png)
 
-# Assignment 02 | Camera Calibration and Optical Triangulation  
+# Camera Calibration and Optical Triangulation  
 
 This project was developed as part of **ENGN2502: 3D Photography (Fall 2024, Brown University)**.  
 The goal is to implement **camera calibration** and **laser line triangulation** to reconstruct 3D point clouds from structured light scanning.  
