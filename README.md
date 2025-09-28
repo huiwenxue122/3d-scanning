@@ -38,3 +38,46 @@ The figure below illustrates the process:
 - **Green points** = rows where a valid laser peak is detected  
 
 ![detectLaser explanation](1.png)
+
+# Assignment 02 | Camera Calibration and Optical Triangulation  
+
+This project was developed as part of **ENGN2502: 3D Photography (Fall 2024, Brown University)**.  
+The goal is to implement **camera calibration** and **laser line triangulation** to reconstruct 3D point clouds from structured light scanning.  
+
+---
+
+## 📷 Camera Calibration
+- Used the MATLAB Camera Calibration Toolbox to estimate intrinsic and extrinsic parameters.  
+- Validated calibration accuracy by implementing a reprojection function in C++ with Eigen.  
+- Achieved reprojection error (RMSE) < **0.5 pixels**.  
+
+---
+
+## 🔺 Optical Triangulation
+- Implemented **ray–plane intersection** in C++ to compute 3D points from detected laser line pixels.  
+- Converted points from the camera coordinate system to the world coordinate system, accounting for turntable rotation.  
+- Generated 3D point clouds of scanned objects.  
+
+**Pipeline:**  
+1. Detect laser line (`hw1::detectLaser`).  
+2. Back-project pixels to rays using camera intrinsics.  
+3. Intersect rays with the laser plane.  
+4. Transform results into world coordinates.  
+5. Undo turntable rotation to align all scans.  
+
+---
+
+## 🛠️ Technologies
+- **C++** (Eigen, Qt)  
+- **MATLAB** (Camera Calibration Toolbox)  
+- **Meshlab** (point cloud visualization)  
+
+---
+
+## 📊 Results
+Below is an example of the reconstructed **3D point cloud** of a scanned vase:  
+
+![Point Cloud Result](6.png)  
+
+---
+
