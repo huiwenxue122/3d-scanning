@@ -31,7 +31,7 @@ Input image with intensity profile (before and after filtering):
 
 Final detected laser line (binary output):
 
-![Laser line detection result](images /1.png)
+![Laser line detection result](images/2.png)
 
 
 The core algorithm (`detectLaser`) enhances the red channel and detects the vertical laser line as follows:
