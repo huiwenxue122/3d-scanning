@@ -52,14 +52,16 @@ The goal is to implement **camera calibration** and **laser line triangulation**
 - Achieved reprojection error (RMSE) < **0.5 pixels**.  
 
 ---
-
 ## 🔺 Optical Triangulation
 - Implemented **ray–plane intersection** in C++ to compute 3D points from detected laser line pixels.  
 - Converted points from the camera coordinate system to the world coordinate system, accounting for turntable rotation.  
 - Generated 3D point clouds of scanned objects.  
 
+**Pipeline Illustration:**  
+![Turntable Laser Scanner](6.png)
+
 **Pipeline:**  
-1. Detect laser line (`hw1::detectLaser`).  
+1. Detect laser line.  
 2. Back-project pixels to rays using camera intrinsics.  
 3. Intersect rays with the laser plane.  
 4. Transform results into world coordinates.  
@@ -77,7 +79,7 @@ The goal is to implement **camera calibration** and **laser line triangulation**
 ## 📊 Results
 Below is an example of the reconstructed **3D point cloud** of a scanned vase:  
 
-![Point Cloud Result](6.png)  
+![Point Cloud Result](5.png)  
 
 ---
 
