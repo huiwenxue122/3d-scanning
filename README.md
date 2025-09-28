@@ -83,3 +83,29 @@ Below is an example of the reconstructed **3D point cloud** of a scanned vase:
 
 ---
 
+# 3D Scanner Calibration Summary
+
+The goal is to align the **camera, laser plane, and turntable** within a unified world coordinate system, so that laser pixels captured in images can be accurately reconstructed as 3D points.
+
+## 🎯 Objectives
+- Calibrate the camera to obtain intrinsic parameters (focal length, principal point, distortion).  
+- Estimate the pose `(R, T)` of a vertical checkerboard in multiple images.  
+- Detect laser pixels constrained by a bounding region on the checkerboard.  
+- Triangulate detected laser pixels into 3D points via ray–plane intersection.  
+- Fit the laser plane equation using the reconstructed 3D points.  
+- Estimate the turntable’s center of rotation and axis, defining the world coordinate system.  
+- Validate calibration by projecting virtual wireframe geometry (e.g., a polygonal cylinder) onto the images.  
+
+## 🖼️ Illustrations
+The following figure shows how multiple checkerboard poses are used to sample the laser plane and fit its equation:
+
+![Laser Plane Overview](./images/laser_plane_overview.png)
+
+The next figure shows an augmented reality overlay of a wireframe cylinder, verifying the stability and correctness of the turntable calibration:
+
+![AR Check](./images/ar_check.png)
+
+## 🧠 Key Points
+- A vertical checkerboard provides 3D intersection lines with the laser, avoiding the ambiguity of a single line on the turntable plane.  
+- Triangulated 3D points should remain fixed in the **camera coordinate system**, appearing as parallel line segments across different views.  
+- The projection of the turntable’s rotation center should remain the same pixel in all images. The world coordinate system is defined with x/y in the turntable plane and z pointing upward.  
