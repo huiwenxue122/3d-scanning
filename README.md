@@ -1,9 +1,15 @@
 # 3d-scanning-demos
-## ⚙️ Features Implemented
-- Integrated OpenCV (v4.10.0) for checkerboard detection and calibration.  
-- Implemented **laser detection** (using background subtraction) and **triangulation** methods.  
-- Automated pipeline: **Capture → Calibrate → Scan → Reconstruct**.  
-- Support for single-laser or dual-laser scanning, with or without color.  
+## 📌 Project Overview
+
+The scanner system consists of:
+- A **Raspberry Pi–based turntable laser scanner** with dual line lasers.  
+- A **Qt application (LaserScanner2024-A-04)** that communicates with the scanner over the network.  
+- Automated **image capture** with turntable rotation and laser switching.  
+- **Calibration** pipeline:
+  - Camera calibration (intrinsics)
+  - Turntable calibration (rotation axis & plane)
+  - Laser plane calibration (laser geometry)  
+- **3D reconstruction** by detecting laser lines in captured images and triangulating 3D points to build a dense point cloud.
 
 ---
 
@@ -46,7 +52,7 @@ The figure below illustrates the process:
 
 ![detectLaser explanation](1.png)
 
-# Camera Calibration and Optical Triangulation  
+## Camera Calibration and Optical Triangulation  
 
 This project was developed as part of **ENGN2502: 3D Photography (Fall 2024, Brown University)**.  
 The goal is to implement **camera calibration** and **laser line triangulation** to reconstruct 3D point clouds from structured light scanning.  
@@ -125,27 +131,22 @@ The assignment integrates the work from previous assignments (homework 1–3) in
 
 ---
 
-## 📌 Project Overview
-
-The scanner system consists of:
-- A **Raspberry Pi–based turntable laser scanner** with dual line lasers.  
-- A **Qt application (LaserScanner2024-A-04)** that communicates with the scanner over the network.  
-- Automated **image capture** with turntable rotation and laser switching.  
-- **Calibration** pipeline:
-  - Camera calibration (intrinsics)
-  - Turntable calibration (rotation axis & plane)
-  - Laser plane calibration (laser geometry)  
-- **3D reconstruction** by detecting laser lines in captured images and triangulating 3D points to build a dense point cloud.
 
 ---
+## ⚙️ Features Implemented
+- Integrated OpenCV (v4.10.0) for checkerboard detection and calibration.  
+- Implemented **laser detection** (using background subtraction) and **triangulation** methods.  
+- Automated pipeline: **Capture → Calibrate → Scan → Reconstruct**.  
+- Support for single-laser or dual-laser scanning, with or without color.  
 
+---
 
 
 ## 🖼️ Hardware Setup
 
 The 3D scanner used in this assignment:  
 
-![Hardware](8.png)
+![Hardware](9.jpg)
 
 ---
 
@@ -155,7 +156,7 @@ Example result: scanning a bust object.
 Left: reconstructed 3D point cloud from laser triangulation.  
 Right: captured image with detected laser line overlay.  
 
-![Results](9.png)
+![Results](10.png)
 
 ---
 
