@@ -50,7 +50,7 @@ The figure below illustrates the process:
 - **Red dashed line** = threshold (`0.8 * avgMax`)  
 - **Green points** = rows where a valid laser peak is detected  
 
-![detectLaser explanation](1.png)
+![detectLaser explanation](images/1.png)
 
 ## Camera Calibration and Optical Triangulation  
 
