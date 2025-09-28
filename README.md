@@ -83,7 +83,7 @@ Below is an example of the reconstructed **3D point cloud** of a scanned vase:
 
 ---
 
-# 3D Scanner Calibration Summary
+# Turntable and Laser Plane Calibration
 
 The goal is to align the **camera, laser plane, and turntable** within a unified world coordinate system, so that laser pixels captured in images can be accurately reconstructed as 3D points.
 
