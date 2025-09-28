@@ -121,3 +121,4 @@ QVector<Vector3d> hw2::triangulate(
 
     return points;
 }
+
