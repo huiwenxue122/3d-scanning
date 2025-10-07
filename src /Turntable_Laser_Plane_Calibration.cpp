@@ -19,7 +19,7 @@ void hw3::estimateExtrinsics
  Matrix3d& R, /* output */
  Vector3d& T  /* output */) {
 
-  (void)kc; // ignore lens distortion for this assignmet
+  (void)kc; // ignore lens distortion 
 
   // (R,T) to be estimated
   //
